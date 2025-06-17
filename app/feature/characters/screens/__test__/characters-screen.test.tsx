@@ -9,7 +9,7 @@ jest.mock('@app/feature/characters/hooks/use-characters')
 const mockedUseCharacters = useCharacters as jest.Mock
 
 describe('CharactersScreen', () => {
-  it('muestra la lista cuando no hay error', () => {
+  it('Show list when there is not an error'	, () => {
     mockedUseCharacters.mockReturnValue({
       characters: [
         {
@@ -37,7 +37,7 @@ describe('CharactersScreen', () => {
     expect(getByTestId('character-list')).toBeTruthy()
   })
 
-  it('muestra el ErrorLayout si hay error', () => {
+  it('shows ErrorLayout when there is an error', () => {
     mockedUseCharacters.mockReturnValue({
       characters: [],
       isLoading: false,
