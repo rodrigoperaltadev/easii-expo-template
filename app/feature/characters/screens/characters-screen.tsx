@@ -25,7 +25,7 @@ export const CharactersScreen = () => {
     return <ErrorLayout onRetryButtonPress={() => fetchNextPage()} />
 
   return (
-    <DefaultLayout>
+    <DefaultLayout isLoading={isLoading}>
       <CharacterList
         data={characters}
         onPress={(id) => navigation.navigate('characterDetail', { id })}
