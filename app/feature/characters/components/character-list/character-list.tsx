@@ -1,47 +1,59 @@
-import { List } from "@app/shared/components/list/list"
-import { CharacterCard } from "../character-card/character-card"
-import type { Character } from "../../types"
-import { StyleSheet, Text, View } from "react-native";
-import { Loader } from "@app/shared/components/loader/loader";
+import { List } from '@app/shared/components/list/list'
+import { CharacterCard } from '../character-card/character-card'
+import type { Character } from '../../types'
+import { StyleSheet, Text, View } from 'react-native'
+import { ListFooterComponent } from '@app/shared/components/list-footer-component/list-footer-component'
 
 type CharacterListProps = {
-  data: Character[];
-  isLoading?: boolean;
-  onPress: (characterId: Character["id"]) => void;
-  onEndReached?: () => void;
-};
+  data: Character[]
+  onPress: (characterId: Character['id']) => void
+  onEndReached?: () => void
+  isFetchingNextPage?: boolean
+  error?: Error | null
+  fetchNextPage?: () => void
+}
 
 const ListEmptyComponent = () => (
   <View style={styles.content}>
-    <Text style={{ fontSize: 16, color: 'gray' }}>
-      No characters found.
-    </Text>
+    <Text style={{ fontSize: 16, color: 'gray' }}>No characters found.</Text>
   </View>
-);
+)
 
-
-export const CharacterList = ({ data, isLoading, onPress, onEndReached }: CharacterListProps) => {
-
+export const CharacterList = ({
+  data,
+  isFetchingNextPage = false,
+  error,
+  fetchNextPage,
+  onPress,
+  onEndReached
+}: CharacterListProps) => {
   return (
     <List
+      testID='character-list'
       data={data}
       keyExtractor={(item) => item.id.toString()}
       showsVerticalScrollIndicator={false}
       ListEmptyComponent={ListEmptyComponent}
-      ListFooterComponent={isLoading ? <Loader /> : null}
+      ListFooterComponent={
+        <ListFooterComponent
+          isLoadingMore={isFetchingNextPage}
+          error={error}
+          onRetry={fetchNextPage}
+        />
+      }
       onEndReached={onEndReached}
       onEndReachedThreshold={0.5}
       renderItem={({ item }) => (
         <CharacterCard character={item} onPress={onPress} />
       )}
     />
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   content: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

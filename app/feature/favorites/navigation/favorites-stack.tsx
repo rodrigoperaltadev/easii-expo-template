@@ -8,7 +8,7 @@ export type FavoritesStackParamList = {
 }
 
 export type FavoritesStackNavigationProp =
-  NativeStackNavigationProp<FavoritesStackParamList>;
+  NativeStackNavigationProp<FavoritesStackParamList>
 
 const Stack = createNativeStackNavigator<FavoritesStackParamList>()
 

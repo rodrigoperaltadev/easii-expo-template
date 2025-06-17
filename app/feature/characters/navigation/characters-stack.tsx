@@ -1,4 +1,7 @@
-import { createNativeStackNavigator, type NativeStackNavigationProp } from '@react-navigation/native-stack'
+import {
+  createNativeStackNavigator,
+  type NativeStackNavigationProp
+} from '@react-navigation/native-stack'
 import { CharacterDetailScreen, CharactersScreen } from '../screens'
 
 export type CharactersStackParamList = {
@@ -8,8 +11,7 @@ export type CharactersStackParamList = {
 
 const Stack = createNativeStackNavigator<CharactersStackParamList>()
 export type CharactersStackNavigationProp =
-  NativeStackNavigationProp<CharactersStackParamList>;
-
+  NativeStackNavigationProp<CharactersStackParamList>
 
 export const CharactersStack = () => {
   return (

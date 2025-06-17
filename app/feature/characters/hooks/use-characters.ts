@@ -19,11 +19,11 @@ export const useCharacters = () => {
       const url = new URL(next)
       const page = url.searchParams.get('page')
       return page ? Number.parseInt(page, 10) : undefined
-    },
+    }
   })
 
   const characters = query.data?.pages.flatMap((page) => page.results) ?? []
-  
+
   return {
     ...query,
     characters

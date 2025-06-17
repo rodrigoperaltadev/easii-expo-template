@@ -1,5 +1,5 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
-import type { Character } from "../../types"
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import type { Character } from '../../types'
 
 export type CharacterDetailProps = {
   data: Character
@@ -11,7 +11,7 @@ export const CharacterDetail = ({ data }: CharacterDetailProps) => {
       <Image
         source={{ uri: data.image }}
         style={styles.image}
-        resizeMode="cover"
+        resizeMode='cover'
       />
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>{data.name}</Text>
@@ -33,37 +33,37 @@ export const CharacterDetail = ({ data }: CharacterDetailProps) => {
         <Text style={styles.propertyValue}>{data.species}</Text>
       </View>
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    gap: 16,
+    gap: 16
   },
   titleContainer: {
     padding: 16,
     backgroundColor: '#f8f8f8',
-    borderBottomColor: '#ddd',
+    borderBottomColor: '#ddd'
   },
   titleText: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#333'
   },
   image: {
-    width: "100%",
+    width: '100%',
     height: 300,
-    borderRadius: 8,
+    borderRadius: 8
   },
   propertyLabel: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 4,
+    marginBottom: 4
   },
   propertyValue: {
     fontSize: 16,
-    color: '#333',
+    color: '#333'
   },
   rowInfo: {
     flexDirection: 'row',
@@ -71,8 +71,6 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#fff',
     marginTop: 8,
-    borderRadius: 8,
-    
+    borderRadius: 8
   }
-
 })

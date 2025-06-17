@@ -1,12 +1,12 @@
-import { CharacterList } from "@app/feature/characters/components/character-list/character-list";
-import { DefaultLayout } from "@app/shared/layout/default-layout";
-import { useFavoritesStore } from "../store/use-favorites-store";
-import { useNavigation } from "@react-navigation/native";
-import type { FavoritesStackNavigationProp } from "../navigation/favorites-stack";
+import { CharacterList } from '@app/feature/characters/components/character-list/character-list'
+import { DefaultLayout } from '@app/shared/layout/default-layout'
+import { useFavoritesStore } from '../store/use-favorites-store'
+import { useNavigation } from '@react-navigation/native'
+import type { FavoritesStackNavigationProp } from '../navigation/favorites-stack'
 
 export const FavoritesScreen = () => {
-  const { characters } = useFavoritesStore();
-  const navigation = useNavigation<FavoritesStackNavigationProp>();
+  const { characters } = useFavoritesStore()
+  const navigation = useNavigation<FavoritesStackNavigationProp>()
   return (
     <DefaultLayout>
       <CharacterList
@@ -14,5 +14,5 @@ export const FavoritesScreen = () => {
         onPress={(id) => navigation.navigate('favoriteDetail', { id })}
       />
     </DefaultLayout>
-  );
-};
+  )
+}
