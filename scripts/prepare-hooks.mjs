@@ -16,18 +16,14 @@ writeFileSync('.husky/_/husky.sh', huskyShim)
 chmodSync('.husky/_/husky.sh', 0o755)
 
 // commit-msg
-const commitMsg = `#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
+const commitMsg = `
 npx commitlint --edit "$1"
 `
 writeFileSync('.husky/commit-msg', commitMsg)
 chmodSync('.husky/commit-msg', 0o755)
 
 // pre-commit
-const preCommit = `#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
+const preCommit = `
 yarn format
 yarn lint
 
@@ -40,9 +36,7 @@ writeFileSync('.husky/pre-commit', preCommit)
 chmodSync('.husky/pre-commit', 0o755)
 
 // pre-push
-const prePush = `#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
+const prePush = `
 yarn typecheck
 yarn test
 `
