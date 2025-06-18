@@ -1,0 +1,10 @@
+{
+  "characters": {
+    "title": "Personajes",
+    "description": "Lista de personajes de Rick y Morty"
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "description": "Lista de personajes favoritos"
+  }
+}

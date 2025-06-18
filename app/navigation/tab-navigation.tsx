@@ -2,10 +2,13 @@ import { CharactersStack } from '@app/features/characters/navigation/characters-
 import { FavoritesStack } from '@app/features/favorites/navigation/favorites-stack'
 import { Icon } from '@app/shared/components/icon/icon'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { useTranslation } from 'react-i18next'
 
 const Tab = createBottomTabNavigator()
 
 export const TabNavigation = () => {
+  const { t } = useTranslation()
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -16,7 +19,7 @@ export const TabNavigation = () => {
         name='charactersStack'
         component={CharactersStack}
         options={{
-          tabBarLabel: 'Characters',
+          tabBarLabel: t('characters.title'),
           tabBarIcon: ({ color, size }) => (
             <Icon name='person' size={size} color={color} />
           )
@@ -26,7 +29,7 @@ export const TabNavigation = () => {
         name='favoritesStack'
         component={FavoritesStack}
         options={{
-          tabBarLabel: 'Favorites',
+          tabBarLabel: t('favorites.title'),
           tabBarIcon: ({ color, size }) => (
             <Icon name='heart' size={size} color={color} />
           )

@@ -1,0 +1,10 @@
+{
+  "characters": {
+    "title": "Characters",
+    "description": "List of Rick and Morty characters"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "description": "List of favorite characters"
+  }
+}
