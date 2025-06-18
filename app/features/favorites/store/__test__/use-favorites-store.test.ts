@@ -11,7 +11,7 @@ const mockCharacter: Character = {
   gender: 'Male',
   origin: { name: 'Earth', url: '' },
   location: { name: 'Earth', url: '' },
-  image: '',
+  image: ''
 }
 
 describe('useFavoritesStore', () => {

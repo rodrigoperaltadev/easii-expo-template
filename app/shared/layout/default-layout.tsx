@@ -29,16 +29,13 @@ const Header = ({ title }: { title: string }) => {
   const { colors } = useTheme()
   const navigation = useNavigation()
 
-
   return (
     <View style={styles.headerContainer}>
-      {navigation.canGoBack() && (<Pressable onPress={() => navigation.goBack()}>
-        <Icon
-          name="arrow-back"
-          size={24}
-          color={colors.black}
-        />
-      </Pressable>)}
+      {navigation.canGoBack() && (
+        <Pressable onPress={() => navigation.goBack()}>
+          <Icon name='arrow-back' size={24} color={colors.black} />
+        </Pressable>
+      )}
       <Text style={{ color: colors.textPrimary }}>{title}</Text>
     </View>
   )
