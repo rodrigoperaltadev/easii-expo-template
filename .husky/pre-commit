@@ -1,5 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# Run code formatting and linting
 yarn format
 yarn lint
+
+# If any files were modified by formatting or linting, re-add them to the commit
+if ! git diff --quiet; then
+  echo "🔁 Detected modified files after formatting. Staging them again..."
+  git add .
+fi
