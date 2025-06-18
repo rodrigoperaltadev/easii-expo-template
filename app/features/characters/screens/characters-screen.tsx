@@ -1,4 +1,4 @@
-import { useCharacters } from '@app/feature/characters/hooks/use-characters'
+import { useCharacters } from '@app/features/characters/hooks/use-characters'
 import { DefaultLayout } from '@app/shared/layout/default-layout'
 import { CharacterList } from '../components/character-list/character-list'
 import { useNavigation } from '@react-navigation/native'

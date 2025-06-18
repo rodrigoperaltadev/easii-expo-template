@@ -1,5 +1,5 @@
-import { CharactersStack } from '@app/feature/characters/navigation/characters-stack'
-import { FavoritesStack } from '@app/feature/favorites/navigation/favorites-stack'
+import { CharactersStack } from '@app/features/characters/navigation/characters-stack'
+import { FavoritesStack } from '@app/features/favorites/navigation/favorites-stack'
 import { Icon } from '@app/shared/components/icon/icon'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 

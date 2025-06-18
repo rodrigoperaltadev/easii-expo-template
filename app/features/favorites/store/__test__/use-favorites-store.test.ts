@@ -1,5 +1,5 @@
 import { act } from '@testing-library/react-native'
-import type { Character } from '@app/feature/characters/types'
+import type { Character } from '@app/features/characters/types'
 import { useFavoritesStore as originalStore } from '../use-favorites-store'
 
 const mockCharacter: Character = {
@@ -12,9 +12,6 @@ const mockCharacter: Character = {
   origin: { name: 'Earth', url: '' },
   location: { name: 'Earth', url: '' },
   image: '',
-  episode: [],
-  url: '',
-  created: ''
 }
 
 describe('useFavoritesStore', () => {

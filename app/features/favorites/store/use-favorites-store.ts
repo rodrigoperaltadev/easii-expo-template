@@ -1,4 +1,4 @@
-import type { Character } from '@app/feature/characters/types'
+import type { Character } from '@app/features/characters/types'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'

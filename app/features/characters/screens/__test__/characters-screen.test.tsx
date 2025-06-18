@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react-native'
 import { CharactersScreen } from '../characters-screen'
-import { useCharacters } from '@app/feature/characters/hooks/use-characters'
+import { useCharacters } from '@app/features/characters/hooks/use-characters'
 import { NavigationContainer } from '@react-navigation/native'
 
 // 👇 mock del hook
-jest.mock('@app/feature/characters/hooks/use-characters')
+jest.mock('@app/features/characters/hooks/use-characters')
 
 const mockedUseCharacters = useCharacters as jest.Mock
 

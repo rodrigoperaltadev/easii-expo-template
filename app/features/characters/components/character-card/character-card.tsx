@@ -1,7 +1,7 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import type { Character } from '@app/feature/characters/types'
+import type { Character } from '@app/features/characters/types'
 import { Icon } from '@app/shared/components/icon/icon'
-import { useFavoritesStore } from '@app/feature/favorites/store/use-favorites-store'
+import { useFavoritesStore } from '@app/features/favorites/store/use-favorites-store'
 
 export type CharacterCardProps = {
   character: Character

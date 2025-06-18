@@ -1,4 +1,4 @@
-import { CharacterList } from '@app/feature/characters/components/character-list/character-list'
+import { CharacterList } from '@app/features/characters/components/character-list/character-list'
 import { DefaultLayout } from '@app/shared/layout/default-layout'
 import { useFavoritesStore } from '../store/use-favorites-store'
 import { useNavigation } from '@react-navigation/native'
