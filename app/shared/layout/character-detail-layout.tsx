@@ -1,6 +1,6 @@
-import { CharacterDetail } from '@app/feature/characters/components/character-detail/character-detail'
+import { CharacterDetail } from '@app/features/characters/components/character-detail/character-detail'
 import { DefaultLayout } from './default-layout'
-import { useCharacter } from '@app/feature/characters/hooks/use-character'
+import { useCharacter } from '@app/features/characters/hooks/use-character'
 import { ErrorLayout } from './error-layout'
 
 type CharacterDetailLayoutProps = {
