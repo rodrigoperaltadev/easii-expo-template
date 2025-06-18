@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "test:dev": "jest --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepare-hooks": "node scripts/prepare-hooks.mjs"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
