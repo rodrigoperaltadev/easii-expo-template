@@ -15,8 +15,6 @@ export const CharacterDetailLayout = ({ id }: CharacterDetailLayoutProps) => {
   return (
     <DefaultLayout isLoading={isLoading}>
       <DefaultLayout.Header title={'Character Detail'} />
-      {/* write a header */}
-
       {character && <CharacterDetail data={character} />}
     </DefaultLayout>
   )
