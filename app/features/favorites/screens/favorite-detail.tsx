@@ -1,6 +1,6 @@
+import { CharacterDetailLayout } from '@app/shared/layout/character-detail-layout'
 import { useRoute } from '@react-navigation/native'
 import type { FavoritesStackParamList } from '../navigation/favorites-stack'
-import { CharacterDetailLayout } from '@app/shared/layout/character-detail-layout'
 
 export const FavoriteDetail = () => {
   const route = useRoute()

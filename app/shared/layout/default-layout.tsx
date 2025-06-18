@@ -1,9 +1,9 @@
 import { useTheme } from '@app/shared/hooks/use-theme'
+import { useNavigation } from '@react-navigation/native'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Loader } from '../components/loader/loader'
-import { useNavigation } from '@react-navigation/native'
 import { Icon } from '../components/icon/icon'
+import { Loader } from '../components/loader/loader'
 
 export const DefaultLayout = ({
   children,

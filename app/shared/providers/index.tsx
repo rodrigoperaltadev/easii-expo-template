@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
-import { TanstackQueryProvider } from './tanstack-query-provider'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ReactNavigationThemeProvider } from './react-navigation-theme-provider'
+import { TanstackQueryProvider } from './tanstack-query-provider'
 import { ThemeProvider } from './theme-provider'
 
 const ProvidersList = [

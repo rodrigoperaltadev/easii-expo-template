@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react-native'
-import { CharactersScreen } from '../characters-screen'
 import { useCharacters } from '@app/features/characters/hooks/use-characters'
 import { NavigationContainer } from '@react-navigation/native'
+import { render } from '@testing-library/react-native'
+import { CharactersScreen } from '../characters-screen'
 
 // 👇 mock del hook
 jest.mock('@app/features/characters/hooks/use-characters')

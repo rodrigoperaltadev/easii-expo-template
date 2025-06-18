@@ -1,9 +1,9 @@
 import { useCharacters } from '@app/features/characters/hooks/use-characters'
 import { DefaultLayout } from '@app/shared/layout/default-layout'
-import { CharacterList } from '../components/character-list/character-list'
-import { useNavigation } from '@react-navigation/native'
-import type { CharactersStackNavigationProp } from '../navigation/characters-stack'
 import { ErrorLayout } from '@app/shared/layout/error-layout'
+import { useNavigation } from '@react-navigation/native'
+import { CharacterList } from '../components/character-list/character-list'
+import type { CharactersStackNavigationProp } from '../navigation/characters-stack'
 
 export const CharactersScreen = () => {
   const {

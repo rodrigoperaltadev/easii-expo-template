@@ -1,5 +1,5 @@
-import { act } from '@testing-library/react-native'
 import type { Character } from '@app/features/characters/types'
+import { act } from '@testing-library/react-native'
 import { useFavoritesStore as originalStore } from '../use-favorites-store'
 
 const mockCharacter: Character = {

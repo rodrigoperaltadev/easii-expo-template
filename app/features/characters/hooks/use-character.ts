@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import type { Character } from '../types'
 import { charactersService } from '../services/characters.service'
+import type { Character } from '../types'
 
 const FIVE_MINUTES = 1000 * 60 * 5
 

@@ -1,6 +1,6 @@
+import { CharacterDetailLayout } from '@app/shared/layout/character-detail-layout'
 import { useRoute } from '@react-navigation/native'
 import type { CharactersStackParamList } from '../navigation/characters-stack'
-import { CharacterDetailLayout } from '@app/shared/layout/character-detail-layout'
 
 export const CharacterDetailScreen = () => {
   const route = useRoute()

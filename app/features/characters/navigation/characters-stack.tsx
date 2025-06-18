@@ -1,6 +1,6 @@
 import {
-  createNativeStackNavigator,
-  type NativeStackNavigationProp
+  type NativeStackNavigationProp,
+  createNativeStackNavigator
 } from '@react-navigation/native-stack'
 import { CharacterDetailScreen, CharactersScreen } from '../screens'
 

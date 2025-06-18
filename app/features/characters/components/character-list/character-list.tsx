@@ -1,8 +1,8 @@
-import { List } from '@app/shared/components/list/list'
-import { CharacterCard } from '../character-card/character-card'
-import type { Character } from '../../types'
-import { StyleSheet, Text, View } from 'react-native'
 import { ListFooterComponent } from '@app/shared/components/list-footer-component/list-footer-component'
+import { List } from '@app/shared/components/list/list'
+import { StyleSheet, Text, View } from 'react-native'
+import type { Character } from '../../types'
+import { CharacterCard } from '../character-card/character-card'
 
 type CharacterListProps = {
   data: Character[]

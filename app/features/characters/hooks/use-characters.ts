@@ -1,6 +1,6 @@
 import {
-  useInfiniteQuery,
-  type QueryFunctionContext
+  type QueryFunctionContext,
+  useInfiniteQuery
 } from '@tanstack/react-query'
 import { charactersService } from '../services/characters.service'
 
