@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "start": "yarn check-env && expo start",
+    "android": "yarn check-env && expo start --android",
+    "ios": "yarn check-env && expo start --ios",
+    "web": "yarn check-env && expo start --web",
     "clean": "rm -rf node_modules && rm -rf package-lock.json && rm -rf yarn.lock && rm -rf .expo",
     "format": "biome format --write",
     "lint": "biome check --fix --unsafe",
@@ -14,7 +14,8 @@
     "test": "jest",
     "test:dev": "jest --watch",
     "prepare": "husky install",
-    "prepare-hooks": "node scripts/prepare-hooks.mjs"
+    "prepare-hooks": "node scripts/prepare-hooks.mjs",
+    "check-env": "node --env-file=.env scripts/check-env.mjs"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
