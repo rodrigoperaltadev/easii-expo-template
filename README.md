@@ -71,6 +71,27 @@ yarn test
 
 ---
 
+---
+
+## 📝 Automatic Environment Variable Check
+
+Before starting the app or running important scripts, the project automatically runs a script that validates all required environment variables are defined in your `.env` file.  
+If any required variable is missing, the script will stop execution and display a message indicating which variables are missing.
+
+**Required variables include:**
+- `EXPO_PUBLIC_API_URL`
+
+You can find an example in the [`.env.example`](.env.example) file.
+
+**How does it work?**
+
+Whenever you run `yarn start`, `yarn android`, `yarn ios`, or `yarn web`, the [`scripts/check-env.mjs`](scripts/check-env.mjs) script is executed before starting the development server.  
+This ensures your environment is properly configured and helps prevent hard-to-debug runtime errors.
+
+**If you need to add new required variables**, simply update the `REQUIRED_VARS` array in [`scripts/check-env.mjs`](scripts/check-env.mjs).
+
+---
+
 ## 🛡️ Quality & Tooling
 
 - **Strict TypeScript** for robust, self-documenting code.
