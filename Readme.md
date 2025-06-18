@@ -13,7 +13,7 @@ This approach makes the codebase scalable, testable, and easy to collaborate on 
 
 ```
 app/
-  feature/
+  features/
     characters/
       components/
       hooks/
@@ -39,7 +39,7 @@ app/
     types/
 ```
 
-- **feature/**: Each folder is a self-contained feature.
+- **features/**: Each folder is a self-contained feature.
 - **shared/**: Reusable resources and global utilities (theme, layouts, providers, http, etc).
 - **navigation/**: Main app navigation (tab bar, main stacks).
 
