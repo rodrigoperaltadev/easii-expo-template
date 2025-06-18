@@ -10,6 +10,7 @@
     "clean": "rm -rf node_modules && rm -rf package-lock.json && rm -rf yarn.lock && rm -rf .expo",
     "format": "biome format --write",
     "lint": "biome check",
+    "typecheck": "tsc --noEmit",
     "test": "jest --watchAll"
   },
   "dependencies": {
