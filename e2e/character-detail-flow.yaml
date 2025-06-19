@@ -1,0 +1,11 @@
+appId: com.rickandmorty.app
+---
+- launchApp
+- assertVisible:
+    text: "Rick Sanchez"
+- tapOn: "Rick Sanchez"
+- assertVisible:
+    text: "Status:"
+- back
+- assertVisible:
+    text: "Rick Sanchez"
