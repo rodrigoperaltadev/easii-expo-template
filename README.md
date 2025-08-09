@@ -4,6 +4,64 @@ A modern mobile app built with **React Native** and **Expo**, consuming the publ
 
 ---
 
+## 🔧 Setup Script
+
+This template includes a setup script to quickly customize the app with your project details.
+
+### App Name Configuration Script
+
+The `scripts/set-app-name.sh` script automates the process of changing the application name, bundle identifiers, and package names throughout the project.
+
+**What it does:**
+- Updates app name in `app.json`, `package.json`, and Android configuration files
+- Generates appropriate slug and package identifiers
+- Creates iOS bundle identifier and Android package name
+- Updates README.md with your app name
+- Creates backup files before making changes
+
+**Usage:**
+
+```bash
+# Make the script executable (first time only)
+chmod +x scripts/set-app-name.sh
+
+# Run the script
+./scripts/set-app-name.sh
+```
+
+The script will prompt you for:
+- **App Name**: Display name for your application (e.g., "My Awesome App")
+- **App Slug**: URL-friendly identifier (auto-generated from app name)
+- **Domain Base**: Base domain for package identifiers (default: "com.easii")
+
+**Example interaction:**
+```
+🚀 Script para cambiar nombre de aplicación React Native Expo
+==================================================
+Ingresa la información de tu nueva aplicación:
+
+Nombre de la aplicación (ej: Mi Nueva App): My Todo App
+Slug de la aplicación [my-todo-app]: 
+Dominio base para package (ej: com.empresa) [com.easii]: com.mycompany
+
+📋 Resumen de cambios:
+  📱 Nombre: My Todo App
+  🔗 Slug: my-todo-app
+  🍎 iOS Bundle: com.mycompany.mytodoapp
+  🤖 Android Package: com.mycompany.mytodoapp.app
+
+¿Continuar con estos valores? [y/N]: y
+```
+
+**After running the script:**
+1. Review the changes made
+2. Clean and reinstall dependencies: `rm -rf node_modules && yarn install`
+3. Clear Expo cache: `yarn start --clear`
+4. For Android: `cd android && ./gradlew clean`
+
+> 💡 **Tip**: All original files are backed up with `.backup` extension before changes are applied.
+---
+
 ## 📁 Feature-Based Architecture
 
 Each feature (like `characters`, `favorites`) is self-contained and includes its own components, hooks, navigation, services, and types.
