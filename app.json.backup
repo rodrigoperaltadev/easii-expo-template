@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "easii-expo-template",
-    "slug": "easii-expo-template",
+    "name": "Rick and Morty App",
+    "slug": "rick-and-morty-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.easii.easiiexpotemplate"
+      "bundleIdentifier": "com.rickandmorty"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +22,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.easii.easiiexpotemplate.app"
+      "package": "com.rickandmorty.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

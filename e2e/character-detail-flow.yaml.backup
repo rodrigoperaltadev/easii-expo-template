@@ -1,4 +1,4 @@
-appId: com.easii.easiiexpotemplate.app
+appId: com.rickandmorty.app
 ---
 - launchApp
 - assertVisible:

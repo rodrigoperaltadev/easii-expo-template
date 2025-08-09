@@ -1,4 +1,4 @@
-# easii expo template
+# Rick and Morty App
 
 A modern mobile app built with **React Native** and **Expo**, consuming the public [Rick and Morty API](https://rickandmortyapi.com/). This codebase follows a **feature-based architecture**, designed for scalability, maintainability, and high-quality engineering practices.
 
@@ -44,7 +44,7 @@ app/
 ```bash
 # 1. Clone the repo
 git clone <repo-url>
-cd easii-expo-template
+cd rick-and-morty-app
 
 # 2. Install dependencies
 yarn install
